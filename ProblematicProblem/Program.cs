@@ -39,7 +39,12 @@ namespace ProblematicProblem
                 {
                     seeList = true;
                     Console.WriteLine("Here is the list of activities: ");
-                    Functions.GetList(activities);
+                    foreach (string activity in activities)
+                    {
+                        Console.Write($"{activity} ");
+                        Thread.Sleep(250);
+                    }
+                    Console.WriteLine();
                 }
                 Console.Write("Would you like to add any activities before we generate one? yes/no: ");
                 var inputAddActs = Console.ReadLine();
